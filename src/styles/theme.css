@@ -1,0 +1,136 @@
+/* ---------------------------------------------------------------------------
+ * theme.css — design tokens, resets and typography
+ * Deep-navy cybersecurity palette: blue = information, green = healthy,
+ * orange = warning, red = anomaly. Kept deliberately restrained.
+ * ------------------------------------------------------------------------- */
+
+:root {
+  /* surfaces */
+  --bg: #060c18;
+  --bg-elevated: #0a1324;
+  --sidebar-bg: #071120;
+  --panel: #0e1a30;
+  --panel-2: #122340;
+  --panel-3: #16294a;
+  --line: #1d2f4f;
+  --line-soft: rgba(148, 163, 184, 0.14);
+
+  /* text */
+  --text: #e9f0ff;
+  --text-dim: #9db0d0;
+  --text-faint: #6f83a6;
+
+  /* semantics */
+  --blue: #3b82f6;
+  --blue-soft: rgba(59, 130, 246, 0.14);
+  --green: #22c55e;
+  --green-soft: rgba(34, 197, 94, 0.14);
+  --orange: #f59e0b;
+  --orange-soft: rgba(245, 158, 11, 0.14);
+  --red: #ef4444;
+  --red-soft: rgba(239, 68, 68, 0.14);
+  --purple: #8b5cf6;
+  --cyan: #38bdf8;
+
+  /* shape & motion */
+  --radius: 14px;
+  --radius-sm: 9px;
+  --shadow: 0 12px 34px rgba(2, 8, 23, 0.5);
+  --sidebar-w: 262px;
+
+  --font: 'Inter', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial,
+    sans-serif;
+  --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text);
+  background:
+    radial-gradient(1100px 600px at 85% -10%, rgba(59, 130, 246, 0.1), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(56, 189, 248, 0.07), transparent 60%),
+    var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+code,
+.mono {
+  font-family: var(--mono);
+}
+
+/* numbers line up in tables and cards */
+.num,
+.data-table td.num,
+.stat-value {
+  font-variant-numeric: tabular-nums;
+}
+
+/* muted helpers */
+.muted {
+  color: var(--text-dim);
+}
+.faint {
+  color: var(--text-faint);
+}
+.small {
+  font-size: 12px;
+}
+.tiny {
+  font-size: 11px;
+}
+.strong {
+  font-weight: 600;
+}
+
+.text-green { color: var(--green); }
+.text-orange { color: var(--orange); }
+.text-red { color: var(--red); }
+.text-blue { color: var(--blue); }
+
+/* scrollbars — subtle, matching the dark theme */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #24406b transparent;
+}
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #24406b;
+  border-radius: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}

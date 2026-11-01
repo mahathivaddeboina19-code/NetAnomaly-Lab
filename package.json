@@ -1,0 +1,25 @@
+{
+  "name": "adaptive-network-anomaly-detection",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Adaptive Network Traffic Anomaly Detection Using Lightweight Statistical Methods - academic mini-project research dashboard",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "smoke": "node scripts/smoke.mjs",
+    "verify": "node scripts/verify.mjs",
+    "test": "node scripts/smoke.mjs && node scripts/verify.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.66.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.5"
+  }
+}
